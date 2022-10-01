@@ -129,3 +129,18 @@ input:focus {
 #form-register input[type="submit"]:hover {
     opacity: 1;
 }
+
+#copy-password {
+    padding: 0.7em;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-color: #81d340;
+    color: #81d340;
+    background-color: #fff;
+}
+
+#copy-password:hover {
+    background-color: #81d340;
+    color: #fff;
+}

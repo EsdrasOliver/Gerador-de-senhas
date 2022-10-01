@@ -1,5 +1,6 @@
 const generatedPasswordButton = document.querySelector('#register-help')
 const generatedPasswordElement = document.querySelector('#generated-password')
+const copyPasswordButton = document.querySelector('#copy-password')
 
 /* FUNÇÕES */ 
 const getLowerCase = () => { 
@@ -55,4 +56,19 @@ generatedPasswordButton.addEventListener('click', () => {
         getNumber, 
         getSymbol
     )
+})
+
+/* BOTAO COPIAR SENHA */ 
+copyPasswordButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    
+    const password = generatedPasswordElement.querySelector('h3').innerText
+
+    navigator.clipboard.writeText(password).then(() => {
+        copyPasswordButton.innerText = 'Senha copiada com sucesso'
+
+        setTimeout(() => {
+            copyPasswordButton.innerText = 'Copiar'
+        }, 1000)
+    })
 })
