@@ -86,6 +86,29 @@ input:focus {
     padding: 0.6rem 0;
 }
 
+#input-password {
+    display: flex;
+    align-items: center;
+    flex-direction: initial;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 335px;
+}
+
+#input-password > input {
+    width: 305px;
+}
+
+#input-password > input:focus {
+    box-shadow: 4px;
+    outline-color: var(--cor3);
+}
+
+#input-password img {
+    background-color: #fff;
+    border-radius: 0 5px 5px 0;
+    width: 30px;
+}
 #register-help {
     font-weight: bold;
     cursor: pointer;
